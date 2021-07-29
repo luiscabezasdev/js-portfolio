@@ -27,7 +27,11 @@ module.exports = {
           MiniCssExtractPlugin.loader,
           'css-loader',
           'stylus-loader',
-        ]
+        ],
+      },
+      {
+        test: /\.png/,
+        type: 'asset/resource'
       }
     ]
   },
@@ -42,7 +46,7 @@ module.exports = {
       patterns: [
         {
           from: path.resolve(__dirname, "src", "assets/images"),
-          to: "assets/images"
+          to: "asset/images"
         },
       ],
     }),
